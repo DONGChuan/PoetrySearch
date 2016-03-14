@@ -4,7 +4,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
 
-    <bean id="baseDao" class="com.dong.web.dao.impl.BaseDaoImpl">
+    <bean id="poetDao" class="com.dong.web.dao.impl.PoetDaoImpl">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
+    <bean id="poetryDao" class="com.dong.web.dao.impl.PoetryDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
 </beans>
