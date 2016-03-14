@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+    <package name="myPackage" extends="struts-default">
+        <default-action-ref name="index" />
+        <action name="index">
+            <result>/WEB-INF/index.jsp</result>
+        </action>
+        <action name="searchByPoet" class="com.dong.demo.action.SearchActionByPoet">
+            <result name="success">poetryListByPoet.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+        <action name="searchByTitle" class="com.dong.demo.action.SearchActionByTitle">
+            <result name="success">poetry.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+        <action name="searchByContent" class="com.dong.demo.action.SearchActionByContent">
+            <result name="success">poetry.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+        <action name="searchByTitleAndPoet" class="com.dong.demo.action.SearchActionByTitleAndPoet">
+            <result name="success">poetry.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+    </package>
+</struts>
