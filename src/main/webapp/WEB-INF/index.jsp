@@ -24,9 +24,9 @@
               <form action="searchByPoet" method="get">
                   <div class="input-group">
                     <input id="searchByPoet" type="text" name="poetName" class="form-control" placeholder="请输入作者名称">
-                  <span class="input-group-btn">
-                    <button class="btn btn-default" type="submit">Search</button>
-                  </span>
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="submit">Search</button>
+                    </span>
                   </div>
               </form>
             </div>

@@ -6,6 +6,7 @@ package com.dong.web.dao.impl;
 import com.dong.web.dao.common.BaseDao;
 import com.dong.web.model.PageModel;
 import org.hibernate.SessionFactory;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.lang.reflect.ParameterizedType;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.List;
  * @author DONGChuan
  * Implementation of BaseDao
  */
-@SuppressWarnings("unchecked")
+@Transactional
 public class BaseDaoImpl<T> implements BaseDao<T> {
 
 	// Fields

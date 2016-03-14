@@ -4,5 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
 
+    <bean id="searchActionByPoet" class="com.dong.web.action.SearchActionByPoet">
+        <property name="poetService" ref="poetService"/>
+    </bean>
 
 </beans>

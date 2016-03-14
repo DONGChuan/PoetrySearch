@@ -1,19 +1,19 @@
 package com.dong.web.utils;
 
 /**
- * 数据库语句
- * Created by chuandong on 16/1/21.
+ * SQL statement
+ * Created by DONGChuan on 16/1/21.
  */
 public class DBStatement {
 
     /**
-     * 实现通过作者搜索该作者所有的作品
+     * Get all poetries by poet name
      */
-    public static String getPoetriesByPoet = "SELECT poetries.title " +
-            "FROM poetries " +
-            "LEFT JOIN poets " +
-            "ON poetries.poet_id = poets.id " +
-            "WHERE poets.name = ?";
+    public static String getPoetriesByPoetName = "SELECT e " +
+            "FROM Poetry e " +
+            "LEFT JOIN Poet p " +
+            "ON e.poet.id = p.id " +
+            "WHERE p.name = :name";
 
     /**
      * 实现诗词名称搜索唐诗全文并显示

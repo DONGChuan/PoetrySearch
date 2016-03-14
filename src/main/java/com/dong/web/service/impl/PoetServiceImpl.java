@@ -1,14 +1,30 @@
 package com.dong.web.service.impl;
 
 import com.dong.web.dao.common.PoetDao;
-import com.dong.web.dao.common.PoetryDao;
+import com.dong.web.model.Poetry;
+import com.dong.web.service.common.PoetService;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 /**
  * Created by dchuan on 2016/3/14.
  */
-public class PoetServiceImpl {
+@Transactional
+public class PoetServiceImpl implements PoetService {
+
+    // Fields
 
     private PoetDao poetDao;
+
+    // Functions
+
+    @Override
+    public List<Poetry> getPoetriesByPoetName(String poetName) {
+        return poetDao.getPoetriesByPoetName(poetName);
+    }
+
+    // Setters and getters
 
     public PoetDao getPoetDao() {
         return poetDao;

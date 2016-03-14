@@ -7,7 +7,7 @@
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!-- Bootstrap -->
-<link href="common/css/bootstrap.min.css" rel="stylesheet">
-<script src="common/js/bootstrap.min.js"></script>
+<link href="common/css/bootstrap.css" rel="stylesheet">
+<script src="common/js/bootstrap.js"></script>
 
 <link href="common/css/style.css" rel="stylesheet">

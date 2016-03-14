@@ -1,6 +1,7 @@
 package com.dong.web.model;
 
 import javax.persistence.*;
+import java.util.Set;
 
 /**
  * Created by chuandong on 16/1/21.
@@ -11,7 +12,7 @@ public class Poetry {
 
     // Fields
 
-    @Id
+    @Id @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
@@ -20,6 +21,14 @@ public class Poetry {
 
     @Column(name = "content", nullable = false)
     private String content;
+
+    @ManyToOne(targetEntity = Poet.class)
+    @JoinColumn(name = "poet_id", nullable = false)
+    private Poet poet;
+
+    // Constructor
+
+    public Poetry() {}
 
     // Setters and Getters
 
@@ -45,5 +54,13 @@ public class Poetry {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public Poet getPoet() {
+        return poet;
+    }
+
+    public void setPoet(Poet poet) {
+        this.poet = poet;
     }
 }

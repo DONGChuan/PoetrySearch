@@ -10,21 +10,9 @@
         <action name="index">
             <result>/WEB-INF/index.jsp</result>
         </action>
-        <action name="searchByPoet" class="com.dong.demo.action.SearchActionByPoet">
-            <result name="success">poetryListByPoet.jsp</result>
-            <result name="error">error.jsp</result>
-        </action>
-        <action name="searchByTitle" class="com.dong.demo.action.SearchActionByTitle">
-            <result name="success">poetry.jsp</result>
-            <result name="error">error.jsp</result>
-        </action>
-        <action name="searchByContent" class="com.dong.demo.action.SearchActionByContent">
-            <result name="success">poetry.jsp</result>
-            <result name="error">error.jsp</result>
-        </action>
-        <action name="searchByTitleAndPoet" class="com.dong.demo.action.SearchActionByTitleAndPoet">
-            <result name="success">poetry.jsp</result>
-            <result name="error">error.jsp</result>
+        <action name="searchByPoet" class="searchActionByPoet">
+            <result name="success">/WEB-INF/jsp/poetryListByPoet.jsp</result>
+            <result name="error">/WEB-INF/jsp/error.jsp</result>
         </action>
     </package>
 </struts>

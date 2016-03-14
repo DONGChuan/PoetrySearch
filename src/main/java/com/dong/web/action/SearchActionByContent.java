@@ -1,13 +1,8 @@
 package com.dong.web.action;
 
 import com.dong.web.model.Poetry;
-import com.dong.web.utils.DBHelper;
-import com.dong.web.utils.DBStatement;
 import com.opensymphony.xwork2.ActionSupport;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,25 +20,7 @@ public class SearchActionByContent extends ActionSupport{
     @Override
     public String execute() throws Exception {
 
-        Connection conn = DBHelper.getInstance();
-
-        PreparedStatement pstmt = conn.prepareStatement(DBStatement.getPoetriesByContent);
-        pstmt.setString(1, "%"+poetryContent+"%"); // 查找包含该内容的诗歌
-
-        ResultSet rs = pstmt.executeQuery();
-
-        while(rs.next()){
-            poetryList.add(new Poetry(rs.getInt("id"),
-                    rs.getString("name"),
-                    rs.getString("title"),
-                    rs.getString("content")));
-        }
-
-        if(poetryList.size() > 0) {
-            return SUCCESS;
-        } else {
-            return ERROR;
-        }
+        return "";
 
     }
 

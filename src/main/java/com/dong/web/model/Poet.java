@@ -1,7 +1,6 @@
 package com.dong.web.model;
 
 import javax.persistence.*;
-import java.util.Set;
 
 /**
  * Created by dchuan on 2016/3/14.
@@ -18,10 +17,6 @@ public class Poet {
 
     @Column(name = "name", nullable = false)
     private String name;
-
-    @OneToMany(targetEntity = Poetry.class)
-    @JoinColumn(name = "poet_id", referencedColumnName = "poet_id")
-    private Set<Poetry> poetries;
 
     // Constructor
 
@@ -45,11 +40,4 @@ public class Poet {
         this.name = name;
     }
 
-    public Set<Poetry> getPoetries() {
-        return poetries;
-    }
-
-    public void setPoetries(Set<Poetry> poetries) {
-        this.poetries = poetries;
-    }
 }
