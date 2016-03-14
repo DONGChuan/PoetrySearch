@@ -4,5 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
 
-
+    <bean id="baseDao" class="com.dong.web.dao.impl.BaseDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
 </beans>
