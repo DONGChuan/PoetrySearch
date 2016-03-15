@@ -64,5 +64,6 @@
         </div>
       </div>
     </div>
+    <jsp:include page="jsp/foot.jsp"/>
   </body>
 </html>

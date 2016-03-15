@@ -13,13 +13,13 @@
     <jsp:include page="head.jsp"/>
 </head>
 <body>
-<div class="container">
-    <h1 class="site-title">
-        <s:set name="title" value="poetryTitle"/>
-        <s:if test="title != ''">
-            <s:property value="poetryTitle"/>
-        </s:if>
-    </h1>
+    <div class="container">
+        <h1 class="site-title">
+            <s:set name="title" value="poetryTitle"/>
+            <s:if test="title != ''">
+                <s:property value="poetryTitle"/>
+            </s:if>
+        </h1>
     <div class="panel-container panel-poetry-container panel panel-default">
         <table class="table table-hover">
             <thead>
@@ -43,5 +43,6 @@
         </table>
     </div>
     </div>
+    <jsp:include page="foot.jsp"/>
 </body>
 </html>
