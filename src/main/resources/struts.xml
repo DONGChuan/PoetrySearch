@@ -10,8 +10,12 @@
         <action name="index">
             <result>/WEB-INF/index.jsp</result>
         </action>
-        <action name="searchByPoet" class="searchActionByPoet">
+        <action name="searchByPoetName" class="searchPoetryAction" method="searchByPoetName">
             <result name="success">/WEB-INF/jsp/poetryListByPoet.jsp</result>
+            <result name="error">/WEB-INF/jsp/error.jsp</result>
+        </action>
+        <action name="searchByTitle" class="searchPoetryAction" method="searchByTitle">
+            <result name="success">/WEB-INF/jsp/poetry.jsp</result>
             <result name="error">/WEB-INF/jsp/error.jsp</result>
         </action>
     </package>

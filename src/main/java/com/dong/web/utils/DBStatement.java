@@ -16,13 +16,13 @@ public class DBStatement {
             "WHERE p.name = :name";
 
     /**
-     * 实现诗词名称搜索唐诗全文并显示
+     * Get poetries by title
      */
-    public static String getPoetriesByTitle = "SELECT poets.id, poets.name, p.content " +
-            "FROM poetries p " +
-            "LEFT JOIN poets " +
-            "ON p.poet_id = poets.id " +
-            "WHERE p.title = ?";
+    public static String getPoetriesByTitle = "SELECT e " +
+            "FROM Poetry e " +
+            "LEFT JOIN Poet p " +
+            "ON e.poet.id = p.id " +
+            "WHERE e.title = :title";
 
     /**
      * 实现通过诗歌的名句搜索该唐诗的作者、题目和全文

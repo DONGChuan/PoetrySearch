@@ -21,7 +21,7 @@
               搜索该作者所有的作品
             </div>
             <div class="panel-body">
-              <form action="searchByPoet" method="get">
+              <form action="searchByPoetName" method="get">
                   <div class="input-group">
                     <input id="searchByPoet" type="text" name="poetName" class="form-control" placeholder="请输入作者名称">
                     <span class="input-group-btn">

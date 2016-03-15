@@ -3,6 +3,7 @@ package com.dong.web.action;
 import com.dong.web.model.Poetry;
 import com.dong.web.service.common.PoetService;
 
+import com.dong.web.service.common.PoetryService;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -14,28 +15,38 @@ import java.util.Map;
  * Search Action By Poet Name
  * Created by chuandong on 16/1/23.
  */
-public class SearchActionByPoet extends ActionSupport{
+public class SearchPoetryAction extends ActionSupport{
 
     // Fields
 
-    private PoetService poetService;
+    private PoetryService poetryService; // DI
+    private PoetService poetService;     // DI
     private String poetName;
+    private String poetryTitle;
     private List<Poetry> poetryList;
 
     // Functions
 
-    @Override
-    public String execute() throws Exception {
+    public String searchByPoetName() throws Exception {
 
         poetryList = poetService.getPoetriesByPoetName(poetName);
-        System.out.println(poetryList.get(2).getTitle());
-        System.out.println("aaaaaaaaaaaa");
+
         if(poetryList.size() > 0) {
             return SUCCESS;
         } else {
             return ERROR;
         }
+    }
 
+    public String searchByTitle() throws Exception {
+
+        poetryList = poetryService.getPoetriesByTitle(poetryTitle);
+
+        if(poetryList.size() > 0) {
+            return SUCCESS;
+        } else {
+            return ERROR;
+        }
     }
 
     // Setters and getters
@@ -62,5 +73,21 @@ public class SearchActionByPoet extends ActionSupport{
 
     public void setPoetryList(List<Poetry> poetryList) {
         this.poetryList = poetryList;
+    }
+
+    public PoetryService getPoetryService() {
+        return poetryService;
+    }
+
+    public void setPoetryService(PoetryService poetryService) {
+        this.poetryService = poetryService;
+    }
+
+    public String getPoetryTitle() {
+        return poetryTitle;
+    }
+
+    public void setPoetryTitle(String poetryTitle) {
+        this.poetryTitle = poetryTitle;
     }
 }
