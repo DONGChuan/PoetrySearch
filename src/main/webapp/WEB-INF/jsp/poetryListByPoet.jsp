@@ -15,7 +15,7 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="site-title">
+        <h1 class="site-title text-center">
             <s:if test="poetName != null">
                 <s:property value="poetName"/>的诗歌
             </s:if>

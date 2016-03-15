@@ -14,9 +14,8 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="site-title">
-            <s:set name="title" value="poetryTitle"/>
-            <s:if test="title != ''">
+        <h1 class="site-title text-center">
+            <s:if test="poetryTitle != null">
                 <s:property value="poetryTitle"/>
             </s:if>
         </h1>

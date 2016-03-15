@@ -6,5 +6,5 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<link href="common/css/bootstrap.css" rel="stylesheet">
 <link href="common/css/style.css" rel="stylesheet">
+<link href="common/css/bootstrap.css" rel="stylesheet">

@@ -14,6 +14,7 @@
         </div>
         <div class="col-md-4 text-center">
             <a href="https://github.com/DONGChuan" target="_blank" aria-label="github">
+                <img src="common/img/github-logo.png"/>
             </a>
         </div>
         <div class="col-md-4 text-right">

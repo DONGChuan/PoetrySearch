@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="site-title">唐代诗词搜索</h1>
+      <h1 class="site-title text-center">唐代诗词搜索</h1>
       <div class="panel-container panel panel-default">
         <div class="panel-body">
           <div class="panel panel-info">
