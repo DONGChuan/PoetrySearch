@@ -6,10 +6,10 @@ Web application to search poetries of Tang Dynasty. It's based on:
 
 1. Struts2
 2. Spring4
-3. Hibernate
+3. Hibernate5
 4. MySQL
 
-I coded this application to learn struts and how to integrate it with spring and hibernate.
+I coded this application to learn struts and also how to integrate it with spring and hibernate. :D
 
 ### Screen shots
 
