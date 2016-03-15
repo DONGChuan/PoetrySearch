@@ -19,11 +19,6 @@ public class PoetServiceImpl implements PoetService {
 
     // Functions
 
-    @Override
-    public List<Poetry> getPoetriesByPoetName(String poetName) {
-        return poetDao.getPoetriesByPoetName(poetName);
-    }
-
     // Setters and getters
 
     public PoetDao getPoetDao() {

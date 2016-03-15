@@ -20,7 +20,6 @@ public class SearchPoetryAction extends ActionSupport{
     // Fields
 
     private PoetryService poetryService; // DI
-    private PoetService poetService;     // DI
     private String poetName;
     private String poetryTitle;
     private String poetryContent;
@@ -30,7 +29,7 @@ public class SearchPoetryAction extends ActionSupport{
 
     public String searchByPoetName() throws Exception {
 
-        poetryList = poetService.getPoetriesByPoetName(poetName);
+        poetryList = poetryService.getPoetriesByPoetName(poetName);
 
         if(poetryList.size() > 0) {
             return SUCCESS;
@@ -73,14 +72,6 @@ public class SearchPoetryAction extends ActionSupport{
     }
 
     // Setters and getters
-
-    public PoetService getPoetService() {
-        return poetService;
-    }
-
-    public void setPoetService(PoetService poetService) {
-        this.poetService = poetService;
-    }
 
     public String getPoetName() {
         return poetName;

@@ -10,6 +10,4 @@ import java.util.List;
  */
 public interface PoetDao extends BaseDao<Poet> {
 
-    public List<Poetry> getPoetriesByPoetName(String poetName);
-
 }

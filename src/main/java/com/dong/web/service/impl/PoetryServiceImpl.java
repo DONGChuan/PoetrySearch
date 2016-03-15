@@ -30,6 +30,11 @@ public class PoetryServiceImpl implements PoetryService {
     }
 
     @Override
+    public List<Poetry> getPoetriesByPoetName(String poetName) {
+        return poetryDao.getPoetriesByPoetName(poetName);
+    }
+
+    @Override
     public List<Poetry> getPoetriesByTitleAndPoetName(String title, String name) {
         return poetryDao.getPoetryByTitleAndPoetName(title, name);
     }

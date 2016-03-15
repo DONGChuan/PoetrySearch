@@ -9,6 +9,4 @@ import java.util.List;
  */
 public interface PoetService {
 
-    public List<Poetry> getPoetriesByPoetName(String poetName);
-
 }

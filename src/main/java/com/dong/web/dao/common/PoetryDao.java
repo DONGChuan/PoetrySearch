@@ -14,6 +14,8 @@ public interface PoetryDao extends BaseDao<Poetry> {
 
     public List<Poetry> getPoetryByContent(String content);
 
+    public List<Poetry> getPoetriesByPoetName(String poetName);
+
     public List<Poetry> getPoetryByTitleAndPoetName(String title, String name);
 
 }

@@ -39,6 +39,16 @@ public class PoetryDaoImpl extends BaseDaoImpl<Poetry> implements PoetryDao {
     }
 
     @Override
+    public List<Poetry> getPoetriesByPoetName(String poetName) {
+
+        List<Poetry> result = sessionFactory.getCurrentSession().createQuery(DBStatement.getPoetriesByPoetName)
+                .setString("name", poetName)
+                .list();
+
+        return result;
+    }
+
+    @Override
     public List<Poetry> getPoetryByTitleAndPoetName(String title, String name) {
 
         List<Poetry> result = sessionFactory.getCurrentSession().createQuery(DBStatement.getPoetriesByTitleAndPoetName)

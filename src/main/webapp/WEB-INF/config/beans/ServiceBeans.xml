@@ -4,9 +4,6 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
 
-    <bean id="poetService" class="com.dong.web.service.impl.PoetServiceImpl">
-        <property name="poetDao" ref="poetDao"/>
-    </bean>
     <bean id="poetryService" class="com.dong.web.service.impl.PoetryServiceImpl">
         <property name="poetryDao" ref="poetryDao"/>
     </bean>

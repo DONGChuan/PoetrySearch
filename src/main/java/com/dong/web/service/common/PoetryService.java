@@ -13,6 +13,8 @@ public interface PoetryService {
 
     public List<Poetry> getPoetriesByContent(String content);
 
+    public List<Poetry> getPoetriesByPoetName(String poetName);
+
     public List<Poetry> getPoetriesByTitleAndPoetName(String title, String name);
 
 }

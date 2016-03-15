@@ -5,7 +5,6 @@
        http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
 
     <bean id="searchPoetryAction" class="com.dong.web.action.SearchPoetryAction">
-        <property name="poetService" ref="poetService"/>
         <property name="poetryService" ref="poetryService"/>
     </bean>
 
