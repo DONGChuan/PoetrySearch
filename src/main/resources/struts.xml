@@ -18,5 +18,13 @@
             <result name="success">/WEB-INF/jsp/poetry.jsp</result>
             <result name="error">/WEB-INF/jsp/error.jsp</result>
         </action>
+        <action name="searchByContent" class="searchPoetryAction" method="searchByContent">
+            <result name="success">/WEB-INF/jsp/poetryListByPoet.jsp</result>
+            <result name="error">/WEB-INF/jsp/error.jsp</result>
+        </action>
+        <action name="searchByTitleAndPoetName" class="searchPoetryAction" method="searchByTitleAndPoetName">
+            <result name="success">/WEB-INF/jsp/poetry.jsp</result>
+            <result name="error">/WEB-INF/jsp/error.jsp</result>
+        </action>
     </package>
 </struts>

@@ -28,6 +28,27 @@ public class PoetryDaoImpl extends BaseDaoImpl<Poetry> implements PoetryDao {
         return result;
     }
 
+    @Override
+    public List<Poetry> getPoetryByContent(String content) {
+
+        List<Poetry> result = sessionFactory.getCurrentSession().createQuery(DBStatement.getPoetriesByContent)
+                .setString("content", '%'+content+'%')
+                .list();
+
+        return result;
+    }
+
+    @Override
+    public List<Poetry> getPoetryByTitleAndPoetName(String title, String name) {
+
+        List<Poetry> result = sessionFactory.getCurrentSession().createQuery(DBStatement.getPoetriesByTitleAndPoetName)
+                .setString("title", title)
+                .setString("name", name)
+                .list();
+
+        return result;
+    }
+
     // Setters and getters
 
     @Override

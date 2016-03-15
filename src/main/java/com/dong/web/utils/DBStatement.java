@@ -25,22 +25,22 @@ public class DBStatement {
             "WHERE e.title = :title";
 
     /**
-     * 实现通过诗歌的名句搜索该唐诗的作者、题目和全文
+     * Get poetries by content
      */
-    public static String getPoetriesByContent = "SELECT poets.id, p.title, p.content, poets.name " +
-            "FROM poetries p " +
-            "LEFT JOIN poets " +
-            "ON p.poet_id = poets.id " +
-            "WHERE p.content LIKE ?";
+    public static String getPoetriesByContent = "SELECT e " +
+            "FROM Poetry e " +
+            "LEFT JOIN Poet p " +
+            "ON e.poet.id = p.id " +
+            "WHERE e.content LIKE :content";
 
     /**
-     * 实现诗词名称和作者搜索唐诗全文并显示
+     * Get poetries by title and poet name
      */
-    public static String getPoetriesByTitleAndPoet = "SELECT poets.id, p.content " +
-            "FROM poetries p " +
-            "LEFT JOIN poets " +
-            "ON p.poet_id = poets.id " +
-            "WHERE p.title = ? AND poets.name = ?";
+    public static String getPoetriesByTitleAndPoetName = "SELECT e " +
+            "FROM Poetry e " +
+            "LEFT JOIN Poet p " +
+            "ON e.poet.id = p.id " +
+            "WHERE e.title = :title AND p.name = :name";
 
 
 }

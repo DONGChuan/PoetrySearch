@@ -23,6 +23,7 @@ public class SearchPoetryAction extends ActionSupport{
     private PoetService poetService;     // DI
     private String poetName;
     private String poetryTitle;
+    private String poetryContent;
     private List<Poetry> poetryList;
 
     // Functions
@@ -41,6 +42,28 @@ public class SearchPoetryAction extends ActionSupport{
     public String searchByTitle() throws Exception {
 
         poetryList = poetryService.getPoetriesByTitle(poetryTitle);
+
+        if(poetryList.size() > 0) {
+            return SUCCESS;
+        } else {
+            return ERROR;
+        }
+    }
+
+    public String searchByContent() throws Exception {
+
+        poetryList = poetryService.getPoetriesByContent(poetryContent);
+
+        if(poetryList.size() > 0) {
+            return SUCCESS;
+        } else {
+            return ERROR;
+        }
+    }
+
+    public String searchByTitleAndPoetName() throws Exception {
+
+        poetryList = poetryService.getPoetriesByTitleAndPoetName(poetryTitle, poetName);
 
         if(poetryList.size() > 0) {
             return SUCCESS;
@@ -89,5 +112,13 @@ public class SearchPoetryAction extends ActionSupport{
 
     public void setPoetryTitle(String poetryTitle) {
         this.poetryTitle = poetryTitle;
+    }
+
+    public String getPoetryContent() {
+        return poetryContent;
+    }
+
+    public void setPoetryContent(String poetryContent) {
+        this.poetryContent = poetryContent;
     }
 }

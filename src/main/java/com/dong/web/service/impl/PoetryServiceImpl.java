@@ -24,6 +24,16 @@ public class PoetryServiceImpl implements PoetryService {
         return poetryDao.getPoetryByTitle(title);
     }
 
+    @Override
+    public List<Poetry> getPoetriesByContent(String content) {
+        return poetryDao.getPoetryByContent(content);
+    }
+
+    @Override
+    public List<Poetry> getPoetriesByTitleAndPoetName(String title, String name) {
+        return poetryDao.getPoetryByTitleAndPoetName(title, name);
+    }
+
     // Setters and getters
 
     public PoetryDao getPoetryDao() {

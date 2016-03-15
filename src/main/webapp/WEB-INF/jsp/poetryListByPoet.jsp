@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib uri='http://java.sun.com/jsp/jstl/core' prefix='c'%>
 <html>
 <head>
     <title>诗歌列表</title>
@@ -14,7 +15,14 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="site-title"><s:property value="poetName"/>的诗歌</h1>
+        <h1 class="site-title">
+            <s:if test="poetName != null">
+                <s:property value="poetName"/>的诗歌
+            </s:if>
+            <s:if test="poetryContent != null">
+                搜索 <s:property value="poetryContent"/> 关键字
+            </s:if>
+        </h1>
         <div class="panel-container panel panel-default">
             <table class="table table-hover">
                 <thead>
@@ -28,7 +36,7 @@
                     <tr>
                         <td><s:property value="#list.index"/></td>
                         <td>
-                            <a href="<s:url action="searchByTitleAndPoet"><s:param name="poetryTitle" value="title"/><s:param name="poet" value="author"/></s:url>">
+                            <a href="<s:url action="searchByTitleAndPoetName"><s:param name="poetryTitle" value="title"/><s:param name="poetName" value="poet.name"/></s:url>">
                                 <s:property value="title"/>
                             </a>
                         </td>
